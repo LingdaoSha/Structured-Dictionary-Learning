@@ -1,0 +1,37 @@
+% Instructions for use of structure preserved color normalization toolbox:
+ 
+Note: We suggest to choose the "wise" target for normalization
+
+1. Run the CN_main file (which is nicely organized) for the demo and 
+to see corresponding result output by different color normalization techniques
+
+2. We recommend the default parameter settings.
+
+3. For changing the parameters, go to file (estW.m). Here, you can tune 
+lambda sparsity parameter (in publication), no. of stains (nstains). If you feel that 
+stain separation is not nice, you can change number of patches sampled (npatches), and patchsize.    
+
+
+******************************************************************************************************
+
+
+To report bugs, contact: abhishek.vahadane@gmail.com, vahadane@iitg.ernet.in
+
+We provide the open source MATLAB implementation of strucure preserved normalization scheme in the following paper
+to be published in ISBI 2015: 
+
+BibTex: 
+
+@inproceedings{Vahadane2015ISBI,
+	Author = {Abhishek Vahadane and Tingying Peng and Shadi Albarqouni and Maximilian Baust and Katja Steiger and Anna Melissa Schlitter and Amit Sethi and Irene Esposito and Nassir Navab},
+	Booktitle = {IEEE International Symposium on Biomedical Imaging},
+	Date-Modified = {2015-01-31 17:49:35 +0000},
+	Title = {Structure-Preserved Color Normalization for Histological Images},
+	Year = {2015}}
+
+Please cite this article if you use it or found it useful. 
+See instruction.txt for more insights into our algorithm and run of color normalization techniques
+
+******************************************************************************************************
+
+
