@@ -82,14 +82,10 @@ param.K = 2
 param.lambda=0.1; % regularization parameter
 param.tol=1e-5;
 param.K = 2
-graph.eta_g=[1 1 1 1 1];
-graph.groups=sparse([0 0 0 1 0;
-                     0 0 0 0 0;
-                     0 0 0 0 0;
-                     0 0 0 0 0;
-                     0 0 1 0 0]);   % g5 is included in g3, and g2 is included in g4
-graph.groups_var=sparse([1 0 0 0 0; 
-                         0 0 0 1 1;]); % represents direct inclusion relations 
+graph.eta_g=[1 1];
+graph.groups=sparse(zeros(2));    % g5 is included in g3, and g2 is included in g4
+graph.groups_var=sparse([1 0; 
+                         0 1;]); % represents direct inclusion relations 
 
 param.graph = graph
 
