@@ -12,7 +12,7 @@ lambda=0.02;  % Use smaller values of the lambda (0.01-0.1) for better reconstru
 %% Our Method (The techniques is published in ISBI 2015 under the title "STRUCTURE-PRESERVED COLOR NORMALIZATION FOR HISTOLOGICAL IMAGES")
 % For queries, contact: abhishek.vahadane@gmail.com, vahadane@iitg.ernet.in
 % Source and target stain separation and storage of factors 
-targetFile = dir('TargetImage/*.png');
+targetFile = dir('TargetImage/*.tif');
 
 target=(imread(['TargetImage/',targetFile(1).name]));     % Read input source file
 
@@ -21,7 +21,7 @@ target=(imread(['TargetImage/',targetFile(1).name]));     % Read input source fi
 
 tic
 
-File = dir('SourceImage/*.png');
+File = dir('SourceImage/*.tif');
 for i = 1:length(File)
 source=(imread(['SourceImage/',File(i).name]));  
 [Wis, His,Hivs]=stainsep(source,nstains,lambda);
